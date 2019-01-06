@@ -4,6 +4,11 @@ public without sharing class AccountsController {
         return [SELECT Id, name, industry, Type, NumberOfEmployees, TickerSymbol, Phone FROM Account ORDER BY createdDate ASC];
       }
     
+        @AuraEnabled
+      public static List <Account> getAccountsList() {
+        return [SELECT Id, name, industry, Type, NumberOfEmployees, TickerSymbol, Phone FROM Account ORDER BY createdDate ASC];
+      }
+    
     
        
      
